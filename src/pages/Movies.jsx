@@ -1,7 +1,7 @@
-export const About = () => {
+export const Movies = () => {
   return (
     <main>
-      <h1>About Us</h1>
+      <h1>Movies</h1>
       <p>
         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Delectus
         laborum amet ab cumque sit nihil dolore modi error repudiandae

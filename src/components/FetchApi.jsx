@@ -8,3 +8,10 @@ export const fetchApi = async () => {
   );
   return apiData;
 };
+
+export const fetchFilm = async movie_id => {
+  const apiData = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movie_id}?api_key=${API_KEY}&language=en-US`
+  );
+  return apiData;
+};

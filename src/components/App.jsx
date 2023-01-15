@@ -1,8 +1,9 @@
 import { Route, Routes } from 'react-router-dom';
-import { About } from '../pages/About';
+import { Movies } from '../pages/Movies';
 import { NotFound } from 'pages/NotFound';
 import { Home } from 'pages/Home/Home';
 import { Container, Header, Link } from './App.styled';
+import { MovieDetails } from 'pages/MovieDetails/MovieDetails';
 
 export const App = () => {
   return (
@@ -12,12 +13,13 @@ export const App = () => {
           <Link to="/" end>
             Home
           </Link>
-          <Link to="/about">About</Link>
+          <Link to="/movies">Movies</Link>
         </nav>
       </Header>
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="/about" element={<About />} />
+        <Route path="/movies" element={<Movies />} />
+        <Route path="/movies/:movieId" element={<MovieDetails />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
     </Container>
