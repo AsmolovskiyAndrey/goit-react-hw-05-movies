@@ -7,12 +7,11 @@ export const Container = styled.div`
 `;
 
 export const Header = styled.header`
-  display: flex;
-  align-items: center;
+  display: column;
+  align-items: left;
   gap: 12px;
   padding: 8px 0;
-  margin-bottom: 16px;
-  border-bottom: 2px solid orangered;
+  margin-top: 16px;
   box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
 
   > nav {
@@ -31,4 +30,10 @@ export const Link = styled(NavLink)`
     color: white;
     background-color: orangered;
   }
+`;
+
+export const Nav = styled.nav`
+  padding: 8px 0;
+  border-bottom: 2px solid orangered;
+  margin-bottom: 16px;
 `;

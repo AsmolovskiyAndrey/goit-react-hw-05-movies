@@ -4,7 +4,7 @@ import { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
 import { FilmBox, FilmInfo } from './MovieDetails.styled';
 
-export const MovieDetails = () => {
+const MovieDetails = () => {
   const { movieId } = useParams();
   const location = useLocation();
   const [film, setFilm] = useState([]);
@@ -63,3 +63,5 @@ export const MovieDetails = () => {
     </div>
   );
 };
+
+export default MovieDetails;
