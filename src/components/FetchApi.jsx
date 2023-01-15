@@ -15,3 +15,10 @@ export const fetchFilm = async movie_id => {
   );
   return apiData;
 };
+
+export const castFilm = async movie_id => {
+  const apiData = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movie_id}/credits?api_key=${API_KEY}&language=en-US`
+  );
+  return apiData;
+};
