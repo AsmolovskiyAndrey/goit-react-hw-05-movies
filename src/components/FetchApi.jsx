@@ -22,3 +22,18 @@ export const castFilm = async movie_id => {
   );
   return apiData;
 };
+
+export const reviewsFilm = async movie_id => {
+  const apiData = await axios.get(
+    `https://api.themoviedb.org/3/movie/${movie_id}/reviews?api_key=${API_KEY}&language=en-US&page=1`
+  );
+  return apiData;
+};
+
+export const fetchSearchedFilm = async filmsName => {
+  const fullName = `&query=${filmsName.trim()}`;
+  const apiData = await axios.get(
+    `https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&language=en-US${fullName}&include_adult=false`
+  );
+  return apiData;
+};
