@@ -2,7 +2,8 @@ import { useParams, useLocation } from 'react-router-dom';
 import { fetchFilm } from 'components/FetchApi';
 import { useState, useEffect } from 'react';
 import { Link, Outlet } from 'react-router-dom';
-import { FilmBox, FilmInfo } from './MovieDetails.styled';
+import { FilmBox, FilmInfo, ButLink } from './MovieDetails.styled';
+import { BsArrowLeft } from 'react-icons/bs';
 
 const MovieDetails = () => {
   const { movieId } = useParams();
@@ -28,7 +29,9 @@ const MovieDetails = () => {
 
   return (
     <div>
-      <Link to={backLinkHref}>Go Back</Link>
+      <ButLink to={backLinkHref}>
+        <BsArrowLeft /> Go Back
+      </ButLink>
       <FilmBox>
         <img
           src={
